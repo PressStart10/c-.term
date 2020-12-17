@@ -14,8 +14,14 @@ class MainClass {
 			tre();
 		}
 		if(cm == "exit"){
-			Console.WriteLine("put \".exit\" to exit")
-			string y = Console.ReadLine()
+			Console.WriteLine("put \".exit\" to exit \n $ "); 
+			string y = Console.ReadLine();
+			if(y == ".exit"){
+				 System.Environment.Exit(3);
+			}
+			else{
+				tre();
+			}
 		}
 		if(cm == "ls"){
 			string[] files = Directory.GetFiles(@"./", "*", SearchOption.AllDirectories);
