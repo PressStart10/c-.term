@@ -1,7 +1,7 @@
 using System;
-
+using System.IO;
 class MainClass {
-	public static string RemoveHTML(string text) { text = text.Replace("echo ", ""); var oRegEx = new System.Text.RegularExpressions.Regex("<[^>]+>"); return ""; }
+	public static string RemoveHTML(string text) { text = text.Replace("echo ", ""); var oRegEx = new System.Text.RegularExpressions.Regex("<[^>]+>"); return oRegEx.Replace(text, string.Empty); }
 	static void tre(){
 		term();
 	}
@@ -13,7 +13,13 @@ class MainClass {
 			Console.WriteLine(ech);
 			tre();
 		}
-		if(cm == ""){
+		if(cm == "exit"){
+			Console.WriteLine("put \".exit\" to exit")
+			string y = Console.ReadLine()
+		}
+		if(cm == "ls"){
+			string[] files = Directory.GetFiles(@"./", "*", SearchOption.AllDirectories);
+        Console.WriteLine(String.Join(Environment.NewLine, files));
 			tre();
 		}
 		else{
