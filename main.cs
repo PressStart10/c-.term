@@ -2,7 +2,7 @@ using System;
 using System.IO;
 class MainClass {
 	public static string RemoveREAD(string text) { text = text.Replace("read ", ""); var oRegEx = new System.Text.RegularExpressions.Regex("<[^>]+>"); return oRegEx.Replace(text, string.Empty); }
-	public static string RemoveECHO(string text) { text = text.Replace("echo ", ""); var oRegEx = new System.Text.RegularExpressions.Regex("<[^>]+>"); return oRegEx.Replace(text, string.Empty); }
+	public static string RemoveECHO(string text) { text = text.Replace("echo ", "").Replace("##", ""); var oRegEx = new System.Text.RegularExpressions.Regex("<[^>]+>"); return oRegEx.Replace(text, string.Empty); }
 	static void tre(){
 		term();
 	} 
@@ -33,6 +33,11 @@ class MainClass {
 			string fl = RemoveREAD(cm);
 			string h = File.ReadAllText(@fl);
 			Console.WriteLine(h);
+			tre();
+		}
+		if(cm.Contains("##")){
+			string d = RemoveECHO(cm);
+			Console.WriteLine(d);
 			tre();
 		}
 		else{
