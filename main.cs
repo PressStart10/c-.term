@@ -20,9 +20,7 @@ class MainClass {
 			if(y == ".exit"){
 				 System.Environment.Exit(0);
 			}
-			else{
-				tre();
-			}
+			tre();
 		}
 		if(cm == "ls"){
 			string[] files = Directory.GetFiles(@"./", "*", SearchOption.AllDirectories);
