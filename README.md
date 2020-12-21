@@ -3,4 +3,5 @@
 commands:
 -echo
 -ls
+-read
 ~~~
