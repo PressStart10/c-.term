@@ -7,7 +7,7 @@
  jobs:
    build:
      executor: win/default     
-		 set: me/n
+     set: me/n
      steps:
        - checkout
        - run: dotnet build
