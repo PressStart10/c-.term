@@ -27,6 +27,10 @@ class MainClass {
         Console.WriteLine(String.Join(Environment.NewLine, files));
 			tre();
 		}
+		if(cm  == "hi"){
+			Console.WriteLine("hoi");
+			tre();
+		}
 		if(cm.Contains("read ")){
 			string fl = RemoveREAD(cm);
 			string h = File.ReadAllText(@fl);

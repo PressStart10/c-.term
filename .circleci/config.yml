@@ -1,12 +1,13 @@
  version: 2.1
-
+ also:
+  -die
  orbs:
   win: circleci/windows@2.2.0
 
  jobs:
    build:
      executor: win/default     
-    
+		 set: me/n
      steps:
        - checkout
        - run: dotnet build

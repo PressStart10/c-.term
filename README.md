@@ -5,4 +5,6 @@ commands:
 -ls
 -read
 -##
+-hi
 ~~~
+
