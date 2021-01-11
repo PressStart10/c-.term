@@ -6,5 +6,6 @@ commands:
 -read
 -##
 -hi
+-AAA
 ~~~
 
