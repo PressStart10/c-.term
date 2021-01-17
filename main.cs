@@ -5,7 +5,7 @@ class MainClass {
 	public static string RemoveECHO(string text) { text = text.Replace("echo ", "").Replace("##", "").Replace("AAA ",""); var oRegEx = new System.Text.RegularExpressions.Regex("<[^>]+>"); return oRegEx.Replace(text, string.Empty); }
 	static void tre(){
 		term();
-	} 
+	}
 	static void term(){
 		Console.Write("$ ");
 		string cm = Console.ReadLine();
@@ -23,7 +23,7 @@ class MainClass {
 			tre();
 		}
 		if(cm == "ls"){
-			string[] files = Directory.GetFiles(@"./", "*", SearchOption.AllDirectories);
+			string[] files = Directory.GetFiles(@"./", "*");
         Console.WriteLine(String.Join(Environment.NewLine, files));
 			tre();
 		}
