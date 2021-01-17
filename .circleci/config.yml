@@ -1,6 +1,4 @@
  version: 2.1
- also:
-  -die
  orbs:
   win: circleci/windows@2.2.0
 
